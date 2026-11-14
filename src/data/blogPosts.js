@@ -44,4 +44,46 @@ export const blogPosts = [
       { heading: "Choose for your current team", paragraphs: ["Compare ongoing cost, flexibility and maintenance against your store’s real needs. A clear plan for updates and support helps whichever platform you select."] },
     ],
   },
+  {
+    slug: "clean-tailwind-css-practices",
+    category: "Frontend",
+    title: "Practical tips for clean and maintainable Tailwind CSS",
+    excerpt: "How to organize utility classes, build reusable patterns and keep your styles maintainable as your codebase grows.",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=80",
+    intro: "Tailwind CSS makes styling rapid, but without structure, templates can quickly get cluttered with lengthy class strings. A few disciplined habits keep your UI code clean, readable and easy to maintain.",
+    sections: [
+      {
+        heading: "Extract repeating patterns into components",
+        paragraphs: [
+          "Avoid copying long utility class strings across different files. When a button, card, badge or form input appears more than once, create a dedicated component or reusable template partial.",
+          "This ensures consistency across your entire design and makes future style updates a one-line change."
+        ],
+      },
+      {
+        heading: "Maintain consistent class ordering",
+        paragraphs: [
+          "Adopt a predictable sequence for utility classes: layout (display, position), spacing (margin, padding), sizing (width, height), typography (font, text color), and finally states (hover, focus, transitions).",
+          "Automated sorting tools like the Prettier plugin for Tailwind CSS make this effortless across your development workflow."
+        ],
+      },
+      {
+        heading: "Leverage theme tokens instead of arbitrary values",
+        paragraphs: [
+          "While arbitrary values like w-[347px] or bg-[#1a2b3c] are occasionally useful, leaning on design tokens ensures unified spacing, typography and brand colors across every breakpoint."
+        ],
+        points: [
+          "Group related utilities logically",
+          "Keep responsive breakpoints in ascending order (sm, md, lg, xl)",
+          "Combine clsx and tailwind-merge for conditional classes"
+        ],
+      },
+      {
+        heading: "Design with state and accessibility in mind",
+        paragraphs: [
+          "Never overlook keyboard navigation and focus rings. Always pair hover states with focus-visible styles so interactive elements remain clear and accessible to every visitor."
+        ],
+      },
+    ],
+  },
 ];
